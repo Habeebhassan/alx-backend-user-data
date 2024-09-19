@@ -31,3 +31,10 @@ def get_unauthorized():
     """trigger the 401 error handler
     """
     abort(401)
+
+
+@app_views.route('/forbidden', methods=['GET'], strict_slashes=False)
+def get_forbidden():
+    """trigger the 403 error handler
+    """
+    abort(403)
